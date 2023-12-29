@@ -2,15 +2,15 @@
 import * as typescriptParser from '@typescript-eslint/parser';
 
 /* Plugins */
-import pluginTypescript from '@typescript-eslint/eslint-plugin';
+import typescript from '@typescript-eslint/eslint-plugin';
 
 /* Configs */
-import configBase from './base';
+import base from './base';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
-	configBase,
-	pluginTypescript.configs.recommended,
+	base,
+	typescript.configs['recommended'],
 	{
 		files: ['**/*.{ts,tsx}'],
 		languageOptions: {
@@ -20,7 +20,7 @@ export default [
 			},
 		},
 		plugins: {
-			typescriptEslint: pluginTypescript,
+			typescriptEslint: typescript,
 		},
 		rules: {
 			'@typescript-eslint/consistent-type-imports': 'error',

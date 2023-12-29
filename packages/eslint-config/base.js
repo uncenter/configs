@@ -2,28 +2,38 @@
 import jsoncParser from 'jsonc-eslint-parser';
 
 /* Plugins */
-import pluginJsonc from 'eslint-plugin-jsonc';
-import pluginUnicorn from 'eslint-plugin-unicorn';
-import pluginImport from 'eslint-plugin-import';
+import jsonc from 'eslint-plugin-jsonc';
+import unicorn from 'eslint-plugin-unicorn';
+import i from 'eslint-plugin-i';
 
 /* Configs */
-import configJs from '@eslint/js';
-import configPrettier from 'eslint-config-prettier';
+import js from '@eslint/js';
+import prettier from 'eslint-config-prettier';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
-	configJs.configs.recommended,
-	pluginUnicorn.configs.recommended,
-	configPrettier,
+	js.configs['recommended'],
 	{
-		plugins: {
-			unicorn: pluginUnicorn,
-			import: pluginImport,
-		},
 		rules: {
 			'capitalized-comments': ['error'],
-
-			/* Import Sorting */
+		},
+	},
+	unicorn.configs['flat/recommended'],
+	{
+		rules: {
+			'unicorn/no-useless-undefined': ['error', { checkArguments: false }],
+			'unicorn/text-encoding-identifier-case': 'off',
+			'unicorn/filename-case': 'off',
+			'unicorn/numeric-separators-style': 'off',
+			'unicorn/prevent-abbreviations': 'off',
+		},
+	},
+	prettier,
+	{
+		plugins: {
+			import: i,
+		},
+		rules: {
 			'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
 			'import/no-duplicates': 'error',
 			'import/first': 'error',
@@ -45,18 +55,13 @@ export default [
 				},
 			],
 			'import/newline-after-import': ['error', { count: 1 }],
-
-			'unicorn/no-useless-undefined': ['error', { checkArguments: false }],
-			'unicorn/text-encoding-identifier-case': 'off', // "UTF-8" > "UTF8"
-			'unicorn/filename-case': 'off',
-			'unicorn/numeric-separators-style': 'off',
 		},
 	},
 	{
 		// Sort package.json keys.
 		files: ['package.json'],
 		plugins: {
-			jsonc: pluginJsonc,
+			jsonc: jsonc,
 		},
 		languageOptions: {
 			parser: jsoncParser,

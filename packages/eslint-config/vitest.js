@@ -1,17 +1,17 @@
 /* Plugins */
-import pluginVitest from 'eslint-plugin-vitest';
+import vitest from 'eslint-plugin-vitest';
 
 /* Configs */
-import configBase from './base';
+import base from './base';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
-	configBase,
-	pluginVitest.configs.recommended,
+	base,
+	vitest.configs['recommended'],
 	{
 		files: ['test/**'],
 		plugins: {
-			vitest: pluginVitest,
+			vitest: vitest,
 		},
 		rules: {
 			'vitest/consistent-test-it': ['error', { fn: 'test' }],

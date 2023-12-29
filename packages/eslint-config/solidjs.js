@@ -1,12 +1,12 @@
 /* Configs */
-import configTypescript from './typescript';
-import configSolid from 'eslint-plugin-solid/configs/typescript';
+import typescript from './typescript';
+import solid from 'eslint-plugin-solid/configs/typescript';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
-	configTypescript,
+	typescript,
 	{
 		files: ['**/*.{ts,tsx}'],
-		...configSolid,
+		...solid,
 	},
 ];
