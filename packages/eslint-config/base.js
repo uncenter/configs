@@ -1,14 +1,14 @@
 /* Parsers */
-import jsoncParser from "jsonc-eslint-parser";
+import jsoncParser from 'jsonc-eslint-parser';
 
 /* Plugins */
-import pluginJsonc from "eslint-plugin-jsonc";
-import pluginUnicorn from "eslint-plugin-unicorn";
-import pluginImport from "eslint-plugin-import";
+import pluginJsonc from 'eslint-plugin-jsonc';
+import pluginUnicorn from 'eslint-plugin-unicorn';
+import pluginImport from 'eslint-plugin-import';
 
 /* Configs */
-import configJs from "@eslint/js";
-import configPrettier from "eslint-config-prettier";
+import configJs from '@eslint/js';
+import configPrettier from 'eslint-config-prettier';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
@@ -21,40 +21,40 @@ export default [
 			import: pluginImport,
 		},
 		rules: {
-			"capitalized-comments": ["error"],
+			'capitalized-comments': ['error'],
 
 			/* Import Sorting */
-			"import/consistent-type-specifier-style": ["error", "prefer-top-level"],
-			"import/no-duplicates": "error",
-			"import/first": "error",
-			"import/order": [
-				"error",
+			'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
+			'import/no-duplicates': 'error',
+			'import/first': 'error',
+			'import/order': [
+				'error',
 				{
-					"newlines-between": "always",
-					groups: [
-						"type",
-						"builtin",
-						"external",
-						"internal",
-						"parent",
-						"sibling",
-						"index",
-						"object",
+					'newlines-between': 'always',
+					'groups': [
+						'type',
+						'builtin',
+						'external',
+						'internal',
+						'parent',
+						'sibling',
+						'index',
+						'object',
 					],
-					alphabetize: { order: "asc", caseInsensitive: true },
+					'alphabetize': { order: 'asc', caseInsensitive: true },
 				},
 			],
-			"import/newline-after-import": ["error", { count: 1 }],
+			'import/newline-after-import': ['error', { count: 1 }],
 
-			"unicorn/no-useless-undefined": ["error", { checkArguments: false }],
-			"unicorn/text-encoding-identifier-case": "off", // "UTF-8" > "UTF8"
-			"unicorn/filename-case": "off",
-			"unicorn/numeric-separators-style": "off",
+			'unicorn/no-useless-undefined': ['error', { checkArguments: false }],
+			'unicorn/text-encoding-identifier-case': 'off', // "UTF-8" > "UTF8"
+			'unicorn/filename-case': 'off',
+			'unicorn/numeric-separators-style': 'off',
 		},
 	},
 	{
 		// Sort package.json keys.
-		files: ["package.json"],
+		files: ['package.json'],
 		plugins: {
 			jsonc: pluginJsonc,
 		},
@@ -62,37 +62,37 @@ export default [
 			parser: jsoncParser,
 		},
 		rules: {
-			"jsonc/sort-keys": [
-				"error",
+			'jsonc/sort-keys': [
+				'error',
 				{
 					order: [
-						"name",
-						"version",
-						"description",
-						"author",
-						"repository",
-						"license",
-						"keywords",
-						"type",
-						"files",
-						"main",
-						"module",
-						"types",
-						"exports",
-						"bin",
-						"scripts",
-						"peerDependencies",
-						"peerDependenciesMeta",
-						"dependencies",
-						"devDependencies",
-						"packageManager",
-						"prettier",
+						'name',
+						'version',
+						'description',
+						'author',
+						'repository',
+						'license',
+						'keywords',
+						'type',
+						'files',
+						'main',
+						'module',
+						'types',
+						'exports',
+						'bin',
+						'scripts',
+						'peerDependencies',
+						'peerDependenciesMeta',
+						'dependencies',
+						'devDependencies',
+						'packageManager',
+						'prettier',
 					],
-					pathPattern: "^$",
+					pathPattern: '^$',
 				},
 				{
-					order: { type: "asc" },
-					pathPattern: "^(?:dev|peer|optional|bundled)?[Dd]ependencies$",
+					order: { type: 'asc' },
+					pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
 				},
 			],
 		},

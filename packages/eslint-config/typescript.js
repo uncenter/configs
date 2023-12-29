@@ -1,29 +1,29 @@
 /* Parsers */
-import * as typescriptParser from "@typescript-eslint/parser";
+import * as typescriptParser from '@typescript-eslint/parser';
 
 /* Plugins */
-import pluginTypescript from "@typescript-eslint/eslint-plugin";
+import pluginTypescript from '@typescript-eslint/eslint-plugin';
 
 /* Configs */
-import configBase from "./base";
+import configBase from './base';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
 	configBase,
 	pluginTypescript.configs.recommended,
 	{
-		files: ["**/*.{ts,tsx}"],
+		files: ['**/*.{ts,tsx}'],
 		languageOptions: {
 			parser: typescriptParser,
 			parserOptions: {
-				project: "tsconfig.json",
+				project: 'tsconfig.json',
 			},
 		},
 		plugins: {
 			typescriptEslint: pluginTypescript,
 		},
 		rules: {
-			"@typescript-eslint/consistent-type-imports": "error",
+			'@typescript-eslint/consistent-type-imports': 'error',
 		},
 	},
 ];
