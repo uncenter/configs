@@ -1,13 +1,9 @@
 {
 	"name": "@uncenter/prettier-config",
 	"version": "0.1.0",
-	"description": "Shared configuration for Prettier.",
+	"description": "Customized configuration for Prettier.",
 	"author": "uncenter <hi@uncenter.dev>",
 	"license": "MIT",
-	"keywords": [
-		"prettier",
-		"prettier-config"
-	],
 	"type": "module",
 	"files": [
 		"index.js"
@@ -15,12 +11,11 @@
 	"main": "index.js",
 	"module": "index.js",
 	"scripts": {
-		"format": "prettier --write .",
-		"lint": "eslint --fix ."
+		"format": "prettier --write ."
 	},
 	"devDependencies": {
 		"prettier": "3.0.3"
 	},
-	"packageManager": "pnpm@8.10.0",
+	"packageManager": "pnpm@8.13.1+sha256.9e5f62ce5f2b7d4ceb3c2848f41cf0b33032c24d683c7088b53f62b1885fb246",
 	"prettier": "./index.js"
 }
