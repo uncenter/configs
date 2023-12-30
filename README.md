@@ -22,11 +22,11 @@ export default [
 	...uncenter.configs["core/base"],
 	// Add an addon if it applies: 'vitest'.
 	...uncenter.configs["addons/vitest"],
-    // Put ignore globs in the 'ignores' field below (flat config abandons .eslintignore files).
-    {
-        ignores: []
-    }
-    // Customize rules below.
+	// Put ignore globs in the 'ignores' field below (flat config abandons .eslintignore files).
+	{
+		ignores: [],
+	},
+	// Customize rules below.
 	{
 		rules: {
 			// ...
