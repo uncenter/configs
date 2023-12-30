@@ -5,10 +5,10 @@ Highly customized configurations for my JavaScript/TypeScript projects.
 ## `@uncenter/eslint-config`
 
 ```
-npm install -D @uncenter/eslint-config
-yarn add -D @uncenter/eslint-config
-pnpm add -D @uncenter/eslint-config
-bun add -D @uncenter/eslint-config
+npm install -D eslint @uncenter/eslint-config
+yarn add -D eslint eslint @uncenter/eslint-config
+pnpm add -D eslint @uncenter/eslint-config
+bun add -D eslint @uncenter/eslint-config
 ```
 
 **eslint.config.js**:
@@ -30,10 +30,10 @@ export default [
 ## `@uncenter/prettier-config`
 
 ```
-npm install -D @uncenter/prettier-config
-yarn add -D @uncenter/prettier-config
-pnpm add -D @uncenter/prettier-config
-bun add -D @uncenter/prettier-config
+npm install -D prettier @uncenter/prettier-config
+yarn add -D prettier @uncenter/prettier-config
+pnpm add -D prettier @uncenter/prettier-config
+bun add -D prettier @uncenter/prettier-config
 ```
 
 **prettier.config.js**:
