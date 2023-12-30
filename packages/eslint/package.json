@@ -5,7 +5,13 @@
 	"author": "uncenter <hi@uncenter.dev>",
 	"license": "MIT",
 	"type": "module",
+	"files": [
+		"core/",
+		"addons/",
+		"index.js"
+	],
 	"main": "index.js",
+	"module": "index.js",
 	"scripts": {
 		"format": "prettier --write ."
 	},
