@@ -1,9 +1,14 @@
 {
+	// Enable Prettier and auto-formatting on save.
 	"prettier.enable": true,
 	"editor.formatOnSave": true,
 
+	// Auto fix ESLint issues on save.
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "always",
+		"source.fixAll.eslint": "explicit",
 		"source.organizeImports": "never"
-	}
+	},
+
+	// Enable ESlint flat config support.
+	"eslint.experimental.useFlatConfig": true
 }
