@@ -1,5 +1,5 @@
 /* Configs */
-import typescript from './core/typescript';
+import typescript from './typescript.js';
 import solid from 'eslint-plugin-solid/configs/typescript';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */

@@ -1,7 +1,7 @@
-import base from './core/base';
-import typescript from './core/typescript';
-import solidjs from './core/solidjs';
-import vitest from './addons/vitest';
+import base from './core/base.js';
+import typescript from './core/typescript.js';
+import solidjs from './core/solidjs.js';
+import vitest from './addons/vitest.js';
 
 export default {
 	configs: {

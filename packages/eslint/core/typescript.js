@@ -5,7 +5,7 @@ import * as typescriptParser from '@typescript-eslint/parser';
 import typescript from '@typescript-eslint/eslint-plugin';
 
 /* Configs */
-import base from './base';
+import base from './base.js';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
