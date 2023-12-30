@@ -6,6 +6,7 @@
 	"license": "MIT",
 	"type": "module",
 	"files": [
+		"README.md",
 		"index.js"
 	],
 	"main": "index.js",
