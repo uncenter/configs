@@ -5,9 +5,9 @@ import jsoncParser from 'jsonc-eslint-parser';
 import jsonc from 'eslint-plugin-jsonc';
 import unicorn from 'eslint-plugin-unicorn';
 import i from 'eslint-plugin-i';
+import js from '@eslint/js';
 
 /* Configs */
-import js from '@eslint/js';
 import prettier from 'eslint-config-prettier';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */

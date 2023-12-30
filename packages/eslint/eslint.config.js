@@ -1,8 +1,8 @@
-import uncenter from './base.js';
+import uncenter from './index.js';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
-	...uncenter,
+	...uncenter.configs['core/base'],
 	{
 		rules: {
 			'import/order': 'off',

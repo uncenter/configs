@@ -1,12 +1,8 @@
 /* Plugins */
 import vitest from 'eslint-plugin-vitest';
 
-/* Configs */
-import base from './base';
-
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
-	base,
 	vitest.configs['recommended'],
 	{
 		files: ['test/**'],
