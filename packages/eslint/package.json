@@ -3,6 +3,11 @@
 	"version": "0.1.0",
 	"description": "Customized configuration for ESLint.",
 	"author": "uncenter <hi@uncenter.dev>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/uncenter/configs.git",
+		"directory": "packages/eslint"
+	},
 	"license": "MIT",
 	"type": "module",
 	"files": [
