@@ -54,3 +54,7 @@ export default {
 	...uncenter,
 };
 ```
+
+## License
+
+[MIT](LICENSE)
