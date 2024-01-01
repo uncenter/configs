@@ -2,6 +2,9 @@
 
 Highly customized configurations for my JavaScript/TypeScript projects.
 
+> [!CAUTION]
+> This project is still not functional! On hold until [typescript-eslint moves to the new flat config system](https://github.com/typescript-eslint/typescript-eslint/issues/7694) as I think that is the major blocker at the moment. You can look at the rules and techniques I have used though, if you are curious.
+
 ## `@uncenter/eslint-config`
 
 ```
