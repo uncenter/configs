@@ -26,21 +26,20 @@
 		"typescript": ">=4.5"
 	},
 	"dependencies": {
-		"@eslint/eslintrc": "^3.0.0",
+		"@eslint/eslintrc": "^3.0.1",
 		"@eslint/js": "^8.56.0",
-		"@typescript-eslint/eslint-plugin": "^6.16.0",
-		"@typescript-eslint/parser": "^6.16.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-i": "^2.29.1",
-		"eslint-plugin-jsonc": "^2.11.2",
-		"eslint-plugin-solid": "^0.13.0",
-		"eslint-plugin-unicorn": "^50.0.1",
-		"eslint-plugin-vitest": "^0.3.20",
-		"jsonc-eslint-parser": "^2.4.0"
+		"eslint-plugin-jsonc": "^2.13.0",
+		"eslint-plugin-solid": "^0.13.1",
+		"eslint-plugin-unicorn": "^51.0.1",
+		"eslint-plugin-vitest": "^0.3.22",
+		"jsonc-eslint-parser": "^2.4.0",
+		"typescript-eslint": "^7.0.1"
 	},
 	"devDependencies": {
 		"eslint": "^8.56.0",
-		"prettier": "^3.1.1"
+		"prettier": "^3.2.5"
 	},
 	"packageManager": "pnpm@8.13.1+sha256.9e5f62ce5f2b7d4ceb3c2848f41cf0b33032c24d683c7088b53f62b1885fb246"
 }
