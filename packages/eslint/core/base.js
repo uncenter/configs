@@ -10,6 +10,9 @@ import js from '@eslint/js';
 /* Configs */
 import prettier from 'eslint-config-prettier';
 
+/* Globals */
+import globals from 'globals';
+
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
 	js.configs['recommended'],
@@ -97,6 +100,13 @@ export default [
 					pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
 				},
 			],
+		},
+	},
+	{
+		languageOptions: {
+			globals: {
+				...globals.node,
+			},
 		},
 	},
 ];
