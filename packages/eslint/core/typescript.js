@@ -5,7 +5,7 @@ import tseslint from 'typescript-eslint';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
-	base,
+	...base,
 	{
 		plugins: {
 			'@typescript-eslint': tseslint.plugin,

@@ -5,7 +5,7 @@ import solid from 'eslint-plugin-solid/configs/typescript.js';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
-	typescript,
+	...typescript,
 	{
 		files: ['**/*.{ts,tsx}'],
 		...solid,
