@@ -1,6 +1,6 @@
 {
 	"name": "@uncenter/eslint-config",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"description": "Customized configuration for ESLint.",
 	"author": "uncenter <hi@uncenter.dev>",
 	"repository": {
