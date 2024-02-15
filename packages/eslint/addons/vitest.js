@@ -15,5 +15,10 @@ export default [
 			'vitest/no-test-return-statement': 'error',
 			'vitest/prefer-lowercase-title': 'error',
 		},
+		languageOptions: {
+			globals: {
+				...vitest.environments.env.globals,
+			},
+		},
 	},
 ];
