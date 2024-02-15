@@ -7,6 +7,7 @@ import tseslint from 'typescript-eslint';
 export default [
 	...base,
 	{
+		files: ['**/*.ts'],
 		plugins: {
 			'@typescript-eslint': tseslint.plugin,
 		},
