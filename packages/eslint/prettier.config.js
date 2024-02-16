@@ -1,6 +1,3 @@
-import uncenter from '../prettier/index.js';
+import { definePrettierConfig } from '../prettier/index.js';
 
-/** @type {import("prettier").Config} */
-export default {
-	...uncenter,
-};
+export default definePrettierConfig();
