@@ -58,7 +58,7 @@ const defaultOptions = {
  *
  * @returns {EslintFlatConfig[]}
  */
-export function defineEslintConfig(opts) {
+export function defineEslintConfig(opts = {}) {
 	const options = {
 		preset: opts.preset || defaultOptions.preset,
 		plugins: {
