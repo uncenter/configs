@@ -10,10 +10,14 @@ bun add -D prettier @uncenter/prettier-config
 **prettier.config.js**:
 
 ```js
-import uncenter from '@uncenter/prettier-config';
+import { definePrettierConfig } from '@uncenter/prettier-config';
 
-/** @type {import("prettier").Config} */
-export default {
-	...uncenter,
-};
+export default definePrettierConfig({
+	// Add/change Prettier configuration options...
+	options: {},
+	// Ignore paths/globs without needing a .prettierignore file!
+	ignores: [],
+	// Set different options for specific file paths/globs.
+	overrides: [],
+});
 ```
