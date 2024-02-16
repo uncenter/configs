@@ -10,23 +10,20 @@ bun add -D eslint @uncenter/eslint-config
 **eslint.config.js**:
 
 ```js
-import uncenter from '@uncenter/eslint-config';
+import { defineEslintConfig } from '@uncenter/eslint-config';
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
-export default [
-	// Add one of the core configurations: 'base', 'typescript', or 'solidjs'.
-	...uncenter.configs['core/base'],
-	// Add an addon if it applies: 'vitest'.
-	...uncenter.configs['addons/vitest'],
-	// Put ignore globs in the 'ignores' field below (flat config abandons .eslintignore files).
-	{
-		ignores: [],
+export default defineEslintConfig({
+	// Select a preset (base, typescript, or solidjs).
+	preset: 'base',
+	plugins: {
+		// Enable/disable various plugins (unicorn, package-json, import, vitest)...
+		vitest: true,
 	},
-	// Customize rules below.
-	{
-		rules: {
-			// ...
-		},
-	},
-];
+	// Include globals such as `node`, `browser`, etc.
+	globals: {},
+	// Add additional paths/globs for ESLint to ignore.
+	ignores: [],
+	// Tweak rules as you see fit!
+	rules: {},
+});
 ```

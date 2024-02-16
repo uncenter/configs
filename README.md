@@ -2,9 +2,6 @@
 
 Highly customized configurations for my JavaScript/TypeScript projects.
 
-> [!CAUTION]
-> This project is still not functional! On hold until [typescript-eslint moves to the new flat config system](https://github.com/typescript-eslint/typescript-eslint/issues/7694) as I think that is the major blocker at the moment. You can look at the rules and techniques I have used though, if you are curious.
-
 ## `@uncenter/eslint-config`
 
 ```
@@ -17,25 +14,22 @@ bun add -D eslint @uncenter/eslint-config
 **eslint.config.js**:
 
 ```js
-import uncenter from "@uncenter/eslint-config";
+import { defineEslintConfig } from "@uncenter/eslint-config";
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
-export default [
-	// Add one of the core configurations: 'base', 'typescript', or 'solidjs'.
-	...uncenter.configs["core/base"],
-	// Add an addon if it applies: 'vitest'.
-	...uncenter.configs["addons/vitest"],
-	// Put ignore globs in the 'ignores' field below (flat config abandons .eslintignore files).
-	{
-		ignores: [],
-	},
-	// Customize rules below.
-	{
-		rules: {
-			// ...
-		},
-	},
-];
+export default defineEslintConfig({
+  // Select a preset (base, typescript, or solidjs).
+  preset: "base",
+  plugins: {
+    // Enable/disable various plugins (unicorn, package-json, import, vitest)...
+    vitest: true,
+  },
+  // Include globals such as `node`, `browser`, etc.
+  globals: {},
+  // Add additional paths/globs for ESLint to ignore.
+  ignores: [],
+  // Tweak rules as you see fit!
+  rules: {},
+});
 ```
 
 ## `@uncenter/prettier-config`
@@ -54,7 +48,7 @@ import uncenter from "@uncenter/prettier-config";
 
 /** @type {import("prettier").Config} */
 export default {
-	...uncenter,
+  ...uncenter,
 };
 ```
 

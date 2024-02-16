@@ -13,7 +13,7 @@
 	"files": [
 		"README.md",
 		"core/",
-		"addons/",
+		"plugins/",
 		"index.js"
 	],
 	"main": "index.js",

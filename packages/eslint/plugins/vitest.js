@@ -1,4 +1,3 @@
-/* Plugins */
 import vitest from 'eslint-plugin-vitest';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
