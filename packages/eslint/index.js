@@ -66,7 +66,7 @@ export function defineEslintConfig(opts) {
 			...opts.plugins,
 		},
 		globals: opts.globals || {},
-		ignores: [...defaultOptions.ignores, ...opts.ignores],
+		ignores: [...defaultOptions.ignores, ...(opts.ignores || [])],
 		rules: opts.rules || {},
 	};
 
@@ -104,7 +104,7 @@ export function defineEslintConfig(opts) {
 	return [
 		...config,
 		{ languageOptions },
-		{ ignores: [...defaultOptions.ignores] },
+		{ ignores: options.ignores },
 		{ rules: options.rules },
 	];
 }
